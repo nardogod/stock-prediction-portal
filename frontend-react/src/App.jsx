@@ -1,24 +1,25 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./assets/css/style.css";
-
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-     <Header/>
-     <Main/>
-     <Footer/>
-
-      
-
-    </>
-  )
+    <BrowserRouter>
+      <Header />
+      <main className="container text-center mt-5">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </main>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
