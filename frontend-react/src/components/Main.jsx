@@ -10,7 +10,7 @@ const Main = () => {
             nulla dolorem temporibus ipsa accusantium recusandae sed. Debitis voluptas repudiandae ipsam ea esse nihil amet tempore.
             Veniam. </p>
             <Button text="Login" class="btn btn-info"/>
-        </div>    
+        </div>      
     </div>
   )
 }
