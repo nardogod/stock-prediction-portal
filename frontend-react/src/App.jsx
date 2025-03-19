@@ -5,20 +5,23 @@ import Main from "./components/Main";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
+import AuthProvider from "./AuthProvider";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <main className="container text-center mt-5">
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-      </main>
-      <Footer />
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Header />
+        <main className="container text-center mt-5">
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

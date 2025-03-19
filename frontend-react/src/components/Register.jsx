@@ -46,6 +46,7 @@ const Register = () => {
   };
 
   return (
+    <>
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6 bg-light-dark p-5 rounded">
@@ -104,6 +105,7 @@ const Register = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
