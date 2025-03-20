@@ -14,7 +14,7 @@ const Main = () => {
       </p>
 
       {/* 🔹 Botão corrigido e funcional */}
-      <Button text="Login" className="btn btn-outline-info" url="/login" />
+      <Button text="Explore Now" className="btn btn-info" url="/dashboard" />
     </div>
   );
 };

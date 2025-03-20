@@ -6,6 +6,9 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 import AuthProvider from "./AuthProvider";
+import Dashboard from "./components/dashboard/Dashboard";
+import PrivateRoute from "./routes/PrivateRoute";
+import PublicRoute from "./routes/PublicRoute";
 
 function App() {
   return (
@@ -14,9 +17,19 @@ function App() {
         <Header />
         <main className="container text-center mt-5">
           <Routes>
+            {/* Rotas Públicas */}
+            <Route element={<PublicRoute />}>
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+            </Route>
+
+            {/* Rotas Privadas */}
+            <Route element={<PrivateRoute />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Route>
+
+            {/* Página Inicial (Acessível para todos) */}
             <Route path="/" element={<Main />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/login" element={<Login />} />
           </Routes>
         </main>
         <Footer />
